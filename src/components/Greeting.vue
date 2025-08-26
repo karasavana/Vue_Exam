@@ -1,4 +1,5 @@
 <template>
+  <h1>Hello from Greeting Component!</h1>
   <p>Hello, {{ username }}</p>
 </template>
 

@@ -2,7 +2,7 @@
   <div>
     <h2>Student List</h2>
     <ul>
-      <li v-for="student in students" :key="student">{{ student }}</li>
+      <li v-for="(student, index) in students" :key="index">{{ student }}</li>
     </ul>
 
     <!-- Pass the first student as username prop -->
@@ -14,7 +14,7 @@
 <script setup>
 import { ref } from 'vue';
 import Greeting from './components/Greeting.vue';
-import Students from './components/Students.vue';
+import Students from './components/Students.vue'; // renamed to Students.vue
 
 const students = ref(['Alice', 'Bob', 'Charlie']);
 </script>

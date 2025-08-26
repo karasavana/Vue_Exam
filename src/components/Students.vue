@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 const students = ref([
   { name: 'Kara Savana Sajol', score: 100 },
@@ -7,13 +7,6 @@ const students = ref([
   { name: 'Jane Doe', score: 25 },
   { name: 'Maria Garcia', score: 50 },
 ]);
-
-const totalStudents = computed(() => students.value.length);
-
-const averageScore = computed(() => {
-  const total = students.value.reduce((sum, student) => sum + student.score, 0);
-  return (total / students.value.length).toFixed(2);
-});
 </script>
 
 <template>
@@ -28,9 +21,6 @@ const averageScore = computed(() => {
         {{ student.name }} - Score: {{ student.score }}
       </li>
     </ul>
-
-    <p>Total Students: {{ totalStudents }}</p>
-    <p>Average Score: {{ averageScore }}</p>
   </div>
 </template>
 
